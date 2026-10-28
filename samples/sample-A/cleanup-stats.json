@@ -1,0 +1,51 @@
+{
+ "rows_in": 23,
+ "rows_out": 21,
+ "duplicates_merged": [
+  [
+   "MP-1020",
+   "MP-1002"
+  ],
+  [
+   "MP-1021",
+   "MP-1010"
+  ]
+ ],
+ "vat_case_fixed": 1,
+ "vat_separators_removed": 2,
+ "vat_prefix_added": 1,
+ "name_whitespace_case": 2,
+ "address_normalised": 1,
+ "missing_postcode": [
+  "MP-1005"
+ ],
+ "missing_city": [
+  "MP-1013"
+ ],
+ "vat_format_invalid": [
+  [
+   "MP-1006",
+   "DE27182818"
+  ],
+  [
+   "MP-1011",
+   "PL779243001"
+  ],
+  [
+   "MP-1015",
+   "PL94522578101"
+  ],
+  [
+   "MP-1018",
+   "BE071234987"
+  ]
+ ],
+ "vat_checksum_fail": [
+  [
+   "MP-1022",
+   "BE0999888777"
+  ]
+ ],
+ "vat_format_ok": 16,
+ "peppol_assigned": 17
+}

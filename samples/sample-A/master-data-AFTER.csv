@@ -1,0 +1,22 @@
+record_id,record_type,legal_name,country,vat_id,street,postcode,city,email,peppol_id
+MP-1000,supplier,Nordwind Logistiek BV,NL,NL862345019B01,Seringenstraat 14,3011 TR,Rotterdam,,0106:862345019B01
+MP-1001,customer,Brasserie du Val SARL,FR,FRKZ750123456,8 Rue des Lilas,59000,Lille,,0009:KZ750123456
+MP-1002,supplier,Antwerp Office Supplies NV,BE,BE0742583104,Kammenstraat 18,2000,Antwerpen,orders@antwerpofficesupplies.example,0208:0742583104
+MP-1003,supplier,Rheinwerk GmbH,DE,DE314159265,Industriestrasse 7,40210,Düsseldorf,,0204:314159265
+MP-1004,customer,Kowalski Dystrybucja Sp. z o.o.,PL,PL5261040828,ul. Polna 3,00-625,Warszawa,,1186:5261040828
+MP-1005,customer,Meulemeester Bouw NV,BE,BE0456789133,Gentseweg 44,,Oudenaarde,,0208:0456789133
+MP-1006,customer,Bergmann & Sohn GmbH,DE,DE27182818,Hafenweg 2,20457,Hamburg,,
+MP-1007,supplier,Dupont Emballages,FR,FRAB440987654,21 Avenue Foch,69003,Lyon,,0009:AB440987654
+MP-1008,customer,Van der Meer Transport BV,NL,NL812345678B90,Havenkade 9,3089 KP,Rotterdam,,0106:812345678B90
+MP-1009,customer,Lefevre Textiles SARL,FR,FR78420555123,3 Rue Victor Hugo,75011,Paris,,0009:78420555123
+MP-1010,supplier,Poldersoft BV,NL,NL001122334B55,Herengracht 420,1017 BZ,Amsterdam,,0106:001122334B55
+MP-1011,supplier,Wisla Foods Sp. z o.o.,PL,PL779243001,ul. Dluga 15,61-850,Poznan,,
+MP-1012,supplier,Havelock Trading GMBH,DE,DE136695976,Torstrasse 101,10119,Berlin,,0204:136695976
+MP-1013,supplier,Coopérative Laitière du Nord,FR,FR55998877441,Route de Bergues 12,59380,,,0009:55998877441
+MP-1014,supplier,Oostvlaamse Metaalwerken NV,BE,BE0888776653,Industriepark 5,9052,Gent,,0208:0888776653
+MP-1015,customer,Zielinska Consulting Sp. z o.o.,PL,PL94522578101,Rynek 8,50-101,Wroclaw,,
+MP-1016,customer,Martin Fournitures SAS,FR,FR20345678901,17 Rue de la Paix,44000,Nantes,,0009:20345678901
+MP-1017,customer,Schneider Baustoffe GmbH,DE,DE259988776,"Am Sandtorkai 3, 2. OG",20457,Hamburg,,0204:259988776
+MP-1018,customer,De Clercq Immo NV,BE,BE071234987,Markt 1,9000,Gent,,
+MP-1019,supplier,Amstel Components BV,NL,NL855443322B10,Prinsengracht 263,1015 GV,Amsterdam,,0106:855443322B10
+MP-1022,customer,Testwinkel De Smet BV,BE,BE0999888777,Stationsstraat 2,8500,Kortrijk,,0208:0999888777
