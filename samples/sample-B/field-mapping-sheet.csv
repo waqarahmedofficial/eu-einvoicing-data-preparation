@@ -1,0 +1,26 @@
+source_field,BT,business_term,UBL_path,rule,sample_value
+erp_inv_no,BT-1,Invoice number,/Invoice/cbc:ID,Copy as-is; unique per seller,INV-2026-0042
+erp_inv_date,BT-2,Issue date,/Invoice/cbc:IssueDate,Format YYYY-MM-DD,2026-10-15
+constant,BT-3,Invoice type code,/Invoice/cbc:InvoiceTypeCode,UNTDID 1001: 380 = commercial invoice,380
+erp_currency,BT-5,Invoice currency code,/Invoice/cbc:DocumentCurrencyCode,ISO 4217,EUR
+buyer_ref,BT-10,Buyer reference,/Invoice/cbc:BuyerReference,Peppol R003: buyer reference OR PO reference required,PO-8814 / Dept FIN
+erp_po_no,BT-13,Purchase order reference,/Invoice/cac:OrderReference/cbc:ID,From buyer PO,PO-8814
+erp_due_date,BT-9,Payment due date,/Invoice/cbc:DueDate,YYYY-MM-DD,2026-11-14
+seller_legal_name,BT-27,Seller name,.../AccountingSupplierParty/.../PartyName/cbc:Name,"Legal (registered) name, not trade name",Van Acker Packaging BV
+seller_vat_no,BT-31,Seller VAT identifier,.../PartyTaxScheme/cbc:CompanyID,"Country prefix + number, no spaces",BE0742583104
+seller_peppol_id,BT-34,Seller electronic address,.../AccountingSupplierParty/.../cbc:EndpointID,Peppol R020: mandatory; schemeID = Peppol scheme,0208:0742583104
+buyer_legal_name,BT-44,Buyer name,.../AccountingCustomerParty/.../PartyName/cbc:Name,Legal name,Rheinwerk GmbH
+buyer_vat_no,BT-48,Buyer VAT identifier,.../PartyTaxScheme/cbc:CompanyID,Required when buyer is VAT-registered,DE314159265
+buyer_peppol_id,BT-49,Buyer electronic address,.../AccountingCustomerParty/.../cbc:EndpointID,Peppol R010: mandatory,0204:314159265
+bank_iban,BT-84,Payee financial account,.../PaymentMeans/cac:PayeeFinancialAccount/cbc:ID,"IBAN, spaces removed in XML",BE68539007547034
+sum_lines,BT-106,Sum of line net amounts,.../LegalMonetaryTotal/cbc:LineExtensionAmount,= SUM(line extensions),463.00
+total_net,BT-109,Tax-exclusive total,.../LegalMonetaryTotal/cbc:TaxExclusiveAmount,= BT-106 - allowances + charges,463.00
+total_vat,BT-110,Total VAT amount,.../LegalMonetaryTotal/cbc:TaxAmount,= SUM(VAT category breakdowns),97.23
+total_gross,BT-112,Tax-inclusive total,.../LegalMonetaryTotal/cbc:TaxInclusiveAmount,= BT-109 + BT-110,560.23
+total_payable,BT-115,Amount due,.../LegalMonetaryTotal/cbc:PayableAmount,= BT-112 - prepaid + rounding,560.23
+line_vat_rate,BT-119,VAT category rate (per category),.../TaxTotal/cac:TaxSubtotal/cac:TaxCategory/cbc:Percent,Per VAT category group,21
+line_id,BT-126,Line identifier,.../InvoiceLine/cbc:ID,Unique within invoice,1..3
+line_qty,BT-129,Invoiced quantity,.../InvoiceLine/cbc:InvoicedQuantity,unitCode from UN/ECE Rec 20 (C62 = one/piece),120 / 40 / 1
+line_net,BT-131,Line net amount,.../InvoiceLine/cbc:LineExtensionAmount,= qty x price (excl. VAT),222.00 / 96.00 / 145.00
+line_item_name,BT-153,Item name,.../InvoiceLine/cac:Item/cbc:Name,Short item name,3 lines
+line_price,BT-146,Item net price,.../InvoiceLine/cac:Price/cbc:PriceAmount,"Excl. VAT, per unit",1.85 / 2.40 / 145.00

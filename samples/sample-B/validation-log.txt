@@ -1,0 +1,18 @@
+1. Well-formed XML: PASS (parsed by lxml without error)
+2. UBL 2.1 XSD validation (official OASIS schemas): PASS
+3. EN 16931 / Peppol BIS rule subset (Python, 13 checks): PASS all
+     [PASS] BT-24 CustomizationID = Peppol BIS 3.0 value
+     [PASS] BT-23 ProfileID present (Peppol R001)
+     [PASS] Mandatory BT-1/2/3/5 present
+     [PASS] Peppol R003: BuyerReference or OrderReference present
+     [PASS] Peppol R010/R020: buyer+seller EndpointID with schemeID
+     [PASS] BT-31/BT-48 VAT IDs match country format
+     [PASS] BR-CO-10: LineExtensionAmount = sum of line extensions
+     [PASS] BR-CO-13/14: TaxExclusive = LineExtension (no allowances/charges)
+     [PASS] BR-CO-15: TaxInclusive = TaxExclusive + TaxAmount
+     [PASS] Line arithmetic: each LineExtension = qty x price
+     [PASS] VAT breakdown: TaxSubtotal taxable = sum of lines in category S
+     [PASS] Dates formatted YYYY-MM-DD (Peppol F001)
+     [PASS] IBAN format (BT-84): BE IBAN passes ISO 13616 mod-97 check
+4. Official CEN EN 16931 Schematron (EN16931-UBL-validation.xslt v1.3.17, ConnectingEurope/CEN artefacts, run locally with SaxonC-HE): PASS - 0 failed assertions (SVRL output kept in work/svrl-output.xml).
+5. NOT performed: the Peppol-specific PEPPOL-EN16931-Rxxx Schematron layer (its compiled artefacts are distributed via Access Point tooling; the Peppol-specific rules were instead checked in the Python subset above, item 3), transmission over the Peppol network (requires a certified Access Point account), and live VIES lookups of the sample VAT IDs (sample data uses invented numbers and .example domains).
